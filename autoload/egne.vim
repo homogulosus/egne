@@ -1,7 +1,14 @@
+" ===================================
+" Name: autoload/egne (eñe)
+" Maintainer: homogulosus
+" Version: 0.1
+" Date: July 23, 2020
+" ===================================
+
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:EgneOn=0
+let s:EgneOn = 0
 
 function! egne#ToggleEgne() abort
   if !s:EgneOn
@@ -12,21 +19,24 @@ function! egne#ToggleEgne() abort
 endfunction
 
 function! Egne() abort
-  echo "Viva Espanya"
-  let s:EgneOn=1
+  echo "Viva España"
+  let s:EgneOn = 1
 
   imap ~n ñ
   imap ~N Ñ
+  imap ~c ç
+  imap ~C Ç
 
 endfunction
 
 function! EgneOff() abort
-  echo "Adios Espanya"
-  let s:EgneOn=0
+  echo "Bye Bye Spain"
+  let s:EgneOn = 0
 
   iunmap ~n
   iunmap ~N
-
+  iunmap ~c
+  iunmap ~C
 
 endfunction
 
