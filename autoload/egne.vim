@@ -19,7 +19,9 @@ function! egne#ToggleEgne() abort
 endfunction
 
 function! Egne() abort
-  echo "Viva España"
+  echohl ModeMsg
+  echomsg " Viva España"
+  echohl NONE
   let s:EgneOn = 1
 
   imap ~n ñ
@@ -30,7 +32,9 @@ function! Egne() abort
 endfunction
 
 function! EgneOff() abort
-  echo "Bye Bye Spain"
+  echohl ModeMsg
+  echomsg " Bye Bye Spain"
+  echohl NONE
   let s:EgneOn = 0
 
   iunmap ~n
